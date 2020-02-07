@@ -1,0 +1,13 @@
+port = 3306
+xport = 33060
+Named PIPE = MYSQL
+Windows service name = MYSQL80
+root password = automationserver
+
+
+User = HybridAutomation
+password = hybridautomation
+
+
+ServerStart in cmd = "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld" -p
+
