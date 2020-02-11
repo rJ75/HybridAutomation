@@ -1,0 +1,4 @@
+Eclipse TestNG Plugin -
+
+Select install software from eclipse and input below url
+http://beust.com/eclipse 
