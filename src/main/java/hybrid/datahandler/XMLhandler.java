@@ -12,7 +12,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 //Class contains functions to parse XML files
-public class XMLhandler {
+public class XMLHandler {
 	String strValue;
 	HashMap<String, String> objHm = new HashMap<String, String>();
 

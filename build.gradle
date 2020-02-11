@@ -2,18 +2,19 @@
  * Gradle User Manual available at https://docs.gradle.org/5.4/userguide/java_library_plugin.html
  */
 
+group 'hydrid.automation'
+version '1.0-SNAPSHOT'
 
-plugins {
-    // Apply the java-library plugin to add support for Java Library
-    id 'java-library'
-    id 'eclipse'
-}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
 
 repositories {
-    // Use jcenter for resolving your dependencies.
-    //jcenter()
-    
-     mavenCentral()
+	mavenCentral()
+	maven {
+		url "https://cloud.experitest.com/repo/"
+	}
       maven {
         url "http://maven2.javacpp.googlecode.com/git/"
     }
@@ -23,339 +24,42 @@ repositories {
     maven{
     	url "https://repo1.perfectomobile.com/public/repositories/maven"
     }
-    
 }
 
+eclipse {
+    classpath {
+        downloadJavadoc = true
+    }
+}
+
+clean.dependsOn "cleanEclipse"
+build.dependsOn "eclipse"
+
+
+
 dependencies {
-
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Common Components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
-
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:27.0.1-jre'
-    
-    // https://mvnrepository.com/artifact/com.google.guava/guava
-	compile group: 'com.google.guava', name: 'guava', version: '28.2-jre'
-    
-
-	// https://mvnrepository.com/artifact/cglib/cglib
-	compile group: 'cglib', name: 'cglib', version: '3.3.0'
+	compile 'org.testng:testng:6.9.10'
+	compile 'io.appium:java-client:6.1.0'
+	compile 'com.experitest:appium-seetest-extension:+'
+	compile 'com.experitest:repo:+'
 	
-	// https://mvnrepository.com/artifact/com.google.code.gson/gson
-	compile group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
-	
-	// https://mvnrepository.com/artifact/commons-io/commons-io
-	compile group: 'commons-io', name: 'commons-io', version: '2.6'
-	
-	// https://mvnrepository.com/artifact/commons-validator/commons-validator
-	compile group: 'commons-validator', name: 'commons-validator', version: '1.6'
-	
-	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
-	
-	// https://mvnrepository.com/artifact/org.apache.maven/maven-core
-	compile group: 'org.apache.maven', name: 'maven-core', version: '3.6.3'
-	
-	// https://mvnrepository.com/artifact/joda-time/joda-time
-	compile group: 'joda-time', name: 'joda-time', version: '2.10.5'
-	
-	// https://mvnrepository.com/artifact/com.github.nscala-time/nscala-time
-	compile group: 'com.github.nscala-time', name: 'nscala-time_2.13', version: '2.22.0'
-	
-	// https://mvnrepository.com/artifact/org.jsoup/jsoup
-	compile group: 'org.jsoup', name: 'jsoup', version: '1.12.1'
-	
-	// https://mvnrepository.com/artifact/com.squareup.okio/okio
-	compile group: 'com.squareup.okio', name: 'okio', version: '2.4.3'
-	
-	// https://mvnrepository.com/artifact/com.googlecode.jdbw/jdbw
-	compile group: 'com.googlecode.jdbw', name: 'jdbw', version: '1.1.1'
-	
-	// https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
-	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
-	
-	// https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
-	compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
-	
-	// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc
-	compile group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '9.0.30'
-
-	// https://mvnrepository.com/artifact/org.codehaus.groovy/groovy
-	compile group: 'org.codehaus.groovy', name: 'groovy', version: '2.5.9'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-		
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Http Components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
-	compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.3.1'
-	
-	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
-	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.11'
-	
-	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore
-	compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.13'
-	
-	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore-nio
-	compile group: 'org.apache.httpcomponents', name: 'httpcore-nio', version: '4.4.13'
-	
-	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient-win
-	compile group: 'org.apache.httpcomponents', name: 'httpclient-win', version: '4.5.11'
-	
-	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime
-	compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.11'
-	
-	// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpasyncclient
-	compile group: 'org.apache.httpcomponents', name: 'httpasyncclient', version: '4.1.4'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Collection Components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
-	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
-	
-	// https://mvnrepository.com/artifact/it.unimi.dsi/fastutil
-	compile group: 'it.unimi.dsi', name: 'fastutil', version: '8.3.0'
-	
-	// https://mvnrepository.com/artifact/org.mapdb/mapdb
-	compile group: 'org.mapdb', name: 'mapdb', version: '3.0.8'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Command Line Parsers
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/commons-cli/commons-cli
-	compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
-	
-	// https://mvnrepository.com/artifact/com.beust/jcommander
-	compile group: 'com.beust', name: 'jcommander', version: '1.78'
-	
-	// https://mvnrepository.com/artifact/com.github.scopt/scopt
-	compile group: 'com.github.scopt', name: 'scopt_2.13', version: '3.7.1'
-	
-	// https://mvnrepository.com/artifact/args4j/args4j
-	compile group: 'args4j', name: 'args4j', version: '2.33'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Selenium components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit-driver
-	compile group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: '2.37.0'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-ie-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-safari-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-edge-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-opera-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-opera-driver', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-leg-rc
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-leg-rc', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-json
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-json', version: '4.0.0-alpha-4'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-devtools', version: '4.0.0-alpha-4'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-http
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-http', version: '4.0.0-alpha-4'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edgehtml-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-edgehtml-driver', version: '4.0.0-alpha-4'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/lift
-	compile group: 'org.seleniumhq.selenium', name: 'lift', version: '3.141.59'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/grid
-	compile group: 'org.seleniumhq.selenium', name: 'grid', version: '4.0.0-alpha-2'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-xpi-driver
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-xpi-driver', version: '4.0.0-alpha-4'
-	
-	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid
-	compile group: 'org.seleniumhq.selenium', name: 'selenium-grid', version: '4.0.0-alpha-4'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Unit Test components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-    
-    // https://mvnrepository.com/artifact/org.testng/testng
-	testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Logging components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.8.0-beta4'
-	
-	// https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-	testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
-
-	// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
-	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.0'
-	
-	// https://mvnrepository.com/artifact/org.jboss.logging/jboss-logging
-	compile group: 'org.jboss.logging', name: 'jboss-logging', version: '3.4.1.Final'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	MySQL components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
-	
-	// https://mvnrepository.com/artifact/org.testcontainers/mysql
-	testCompile group: 'org.testcontainers', name: 'mysql', version: '1.12.5'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Cucumber-Gherkin components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin
-	compile group: 'io.cucumber', name: 'cucumber-plugin', version: '5.1.3'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin
-	compile group: 'io.cucumber', name: 'cucumber-gherkin', version: '5.1.3'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
-	compile group: 'io.cucumber', name: 'cucumber-testng', version: '5.1.3'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-java8
-	compile group: 'io.cucumber', name: 'cucumber-java8', version: '5.1.3'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/gherkin
-	compile group: 'io.cucumber', name: 'gherkin', version: '9.2.0'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-core
-	compile group: 'io.cucumber', name: 'cucumber-core', version: '5.1.3'
-
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-	compile group: 'io.cucumber', name: 'cucumber-java', version: '5.1.3'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
-	compile group: 'io.cucumber', name: 'cucumber-testng', version: '5.1.3'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-	testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '5.1.3'
-	
-		// https://mvnrepository.com/artifact/io.cucumber/cucumber-html
-	compile group: 'io.cucumber', name: 'cucumber-html', version: '0.2.7'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-expressions
-	compile group: 'io.cucumber', name: 'cucumber-expressions', version: '8.3.1'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/datatable
-	compile group: 'io.cucumber', name: 'datatable', version: '3.2.1'
-	
-	// https://mvnrepository.com/artifact/org.jbehave/jbehave-core
-	compile group: 'org.jbehave', name: 'jbehave-core', version: '4.6.1'
-	
-	// https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin-vintage
-	compile group: 'io.cucumber', name: 'cucumber-gherkin-vintage', version: '5.1.3'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	
-	
-    //////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Automation Tools components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/io.appium/java-client
-	compile group: 'io.appium', name: 'java-client', version: '7.3.0'
-	
-	//https://repo1.perfectomobile.com/public/repositories/maven/com/perfectomobile/utilities/perfecto-utilities
-	compile group: 'com.perfectomobile.utilities', name: 'perfecto-utilities', version: '1.0'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	SauceLabs components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	// https://mvnrepository.com/artifact/com.saucelabs/saucerest
-	compile group: 'com.saucelabs', name: 'saucerest', version: '1.0.43'
-	
-	// https://mvnrepository.com/artifact/com.saucelabs/sauce_junit
-	testCompile group: 'com.saucelabs', name: 'sauce_junit', version: '2.1.25'
-	
-	// https://mvnrepository.com/artifact/com.saucelabs/ci-sauce
-	compile group: 'com.saucelabs', name: 'ci-sauce', version: '1.144'
-	
-	// https://mvnrepository.com/artifact/com.saucelabs/sauce_java_common
-	compile group: 'com.saucelabs', name: 'sauce_java_common', version: '2.1.25'
-	
-	// https://mvnrepository.com/artifact/com.saucelabs/sauce_testng
-	compile group: 'com.saucelabs', name: 'sauce_testng', version: '2.1.25'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	//	Excel components
-	//////////////////////////////////////////////////////////////////////////////////////////////////////	
 	// https://mvnrepository.com/artifact/org.apache.poi/poi
 	compile group: 'org.apache.poi', name: 'poi', version: '4.1.1'
 	
 	// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
 	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.1'
 	
-	// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas
-	compile group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.1'
+	// https://mvnrepository.com/artifact/org.yaml/snakeyaml
+	compile group: 'org.yaml', name: 'snakeyaml', version: '1.25'
 	
-	// https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad
-	compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '4.1.1'
-	//////////////////////////////////////////////////////////////////////////////////////////////////////
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
 	
+	
+}
 
-    
+test {
+	useTestNG() {
+		suites './testng.xml'
+	}
 }
