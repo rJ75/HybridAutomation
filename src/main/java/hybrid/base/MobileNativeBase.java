@@ -1,5 +1,5 @@
 package hybrid.base;
 
-interface MobileNativeBase {
+public interface MobileNativeBase {
 
 }

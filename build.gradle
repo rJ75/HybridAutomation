@@ -6,24 +6,51 @@ group 'hydrid.automation'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
 
 sourceCompatibility = 1.8
 
-repositories {
-	mavenCentral()
-	maven {
-		url "https://cloud.experitest.com/repo/"
+mainClassName = 'hybrid.nativexe.TestDriver'
+String title = 'HybridAutomation'
+
+
+clean.dependsOn "cleanEclipse"
+build.dependsOn "eclipse"
+
+
+jar {
+	manifest {
+		attributes 'Main-Class' : mainClassName,
+		'Implementation-Title' : title,
+		'Implementation-Version' : version
 	}
-      maven {
-        url "http://maven2.javacpp.googlecode.com/git/"
-    }
-    maven {
-        url "http://maven2.javacv.googlecode.com/git/"
-    }
-    maven{
-    	url "https://repo1.perfectomobile.com/public/repositories/maven"
-    }
+}
+
+task fatJar(type: Jar) {
+	manifest {
+		attributes 'Main-Class' : mainClassName,
+		'Implementation-Title' : title,
+		'Implementation-Version' : version
+	}
+	baseName = project.name
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+	exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA' 
+}
+
+run {
+	if(project.hasProperty('myargs')){
+		args(myargs.split(' '))
+	}
+	main = mainClassName;
+}
+
+test {
+	useTestNG() {
+		suites './testng.xml'
+	}
 }
 
 eclipse {
@@ -32,34 +59,43 @@ eclipse {
     }
 }
 
-clean.dependsOn "cleanEclipse"
-build.dependsOn "eclipse"
+repositories {
+	mavenCentral()
+	maven {
+		url "https://cloud.experitest.com/repo/"
+	}
+	maven{
+    	url "https://repo1.perfectomobile.com/public/repositories/maven"
+    }
+      maven {
+        url "http://maven2.javacpp.googlecode.com/git/"
+    }
+    maven {
+        url "http://maven2.javacv.googlecode.com/git/"
+    }
 
+}
 
 
 dependencies {
-	compile 'org.testng:testng:6.9.10'
-	compile 'io.appium:java-client:6.1.0'
+
+	compile fileTree(dir: 'libs', include: '*.jar')
+	compileJava.options.encoding = 'UTF-8'
+	compileTestJava.options.encoding = 'UTF-8'
+	javadoc.options.encoding = 'UTF-8'
+	
+	compile 'org.testng:testng:+'
+	compile 'junit:junit:+'
+	compile 'io.appium:java-client:+'
 	compile 'com.experitest:appium-seetest-extension:+'
 	compile 'com.experitest:repo:+'
-	
-	// https://mvnrepository.com/artifact/org.apache.poi/poi
-	compile group: 'org.apache.poi', name: 'poi', version: '4.1.1'
-	
-	// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
-	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.1'
-	
-	// https://mvnrepository.com/artifact/org.yaml/snakeyaml
-	compile group: 'org.yaml', name: 'snakeyaml', version: '1.25'
-	
-	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
-	
-	
+	compile 'org.json:json:+'
+	compile 'org.apache.poi:poi:+'
+	compile 'org.apache.poi:poi-ooxml:+'
+	compile 'org.yaml:snakeyaml:+'
+	compile 'mysql:mysql-connector-java:+'
+	compile 'org.seleniumhq.selenium:selenium-htmlunit-driver:+'
+	compile 'com.aventstack:extentreports:+'
+
 }
 
-test {
-	useTestNG() {
-		suites './testng.xml'
-	}
-}

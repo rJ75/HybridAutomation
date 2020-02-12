@@ -1,18 +1,580 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="bin/main" path="src/main/java">
+	<classpathentry output="bin/main" kind="src" path="src/main/java">
 		<attributes>
 			<attribute name="gradle_scope" value="main"/>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="bin/test" path="src/test/java">
+	<classpathentry output="bin/test" kind="src" path="src/test/java">
 		<attributes>
 			<attribute name="gradle_scope" value="test"/>
 			<attribute name="gradle_used_by_scope" value="test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
-	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="output" path="bin/default"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.1.0/e32dae9ce35e13fd7f0fa7efe89f767ac87552a7/testng-7.1.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.1.0/b0bcea778fb2899aeb4014c558babea8833d180a/testng-7.1.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.1.0/7ec872c348a73b6715aa12ae7d0e74c8e1ecc24a/testng-7.1.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/junit/junit/4.13/d10a9c3acc6c07a5700e37697b5a6b4dcfb8abf9/junit-4.13-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/junit/junit/4.13/e49ccba652b735c93bd6e6f59760d8254cf597dd/junit-4.13.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/junit/junit/4.13/17ed6c7dd587f52c9e7894964eff6a880f0658a/junit-4.13-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/io.appium/java-client/7.3.0/c676ff0e2107fca3059ed9d91d8aca4cd91b0a75/java-client-7.3.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/io.appium/java-client/7.3.0/bcf5aa5acf2d5c541be5a5073e5d2f35347487f/java-client-7.3.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/io.appium/java-client/7.3.0/df6beb6afc69eb6db75657205a87d4838f0b32a8/java-client-7.3.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.experitest/appium-seetest-extension/12.12/ec41267c1e200e673ef8de94c26c88d6e650570d/appium-seetest-extension-12.12.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.experitest/appium-seetest-extension/12.12/d10ce630f0ff69a9634eee6d478f8652a6dccb8d/appium-seetest-extension-12.12-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.experitest/repo/1.1/11913908d3cb129ccbe51e97dfbf3e329d40e342/repo-1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.json/json/20190722/6c40df0d93d36cdfc0fbf08e4e3b27eaa1208199/json-20190722-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.json/json/20190722/7bce7bacf0ab5e9f894d307a3de8b7f540064d5/json-20190722.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.json/json/20190722/a9c8ca2e79f6c9488b5c824b9327bfaf30fe24fb/json-20190722-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/4.1.1/4f0f6ffe7a9b2e4cd8cd67c5a06cc6b7174c7327/poi-ooxml-4.1.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/4.1.1/216d8bb4c064c3a1079e77d693cd60346dd63f38/poi-ooxml-4.1.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/4.1.1/75cc0315cc4e0732ec83b9943dee12bba8081369/poi-ooxml-4.1.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/4.1.1/45d063946e80a2d08a209bebc7d87c7ad8d6d2cb/poi-4.1.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/4.1.1/c915f1a426213a8450fb473b5b3adb63f5ac1017/poi-4.1.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/4.1.1/1420d41b21bc51e06cd67f55a4d16e00d339fc8b/poi-4.1.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.25/45379604b7a254120101009ba09537737daed6f/snakeyaml-1.25-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.25/8b6e01ef661d8378ae6dd7b511a7f2a33fae1421/snakeyaml-1.25.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.25/a6006ebb0a6ef92a022d06a626c60b70d00b0d1e/snakeyaml-1.25-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.19/503203747b1ea8e7d41ba6d855a3a3cf91201d3d/mysql-connector-java-8.0.19-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.19/9af69ef0f68eae737351ff55c0ba6e23a06826a5/mysql-connector-java-8.0.19.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-htmlunit-driver/2.52.0/63eb13416f90efc063d20681646af5b5be8eccb1/selenium-htmlunit-driver-2.52.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-htmlunit-driver/2.52.0/b9945a26ec2518b9d094e43e7d47b8e9146d5d39/selenium-htmlunit-driver-2.52.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-htmlunit-driver/2.52.0/f5c16e63fbf5f4fe43e4a4437c05d0bfbb1b5812/selenium-htmlunit-driver-2.52.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.aventstack/extentreports/4.1.3/1daa71487efdb894fd268e7feffb9eb388cdb31b/extentreports-4.1.3-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.aventstack/extentreports/4.1.3/5208248e6992ae6cfe9a1c56963a4b9673f782e2/extentreports-4.1.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.aventstack/extentreports/4.1.3/8d34c12f1d58797db91fe4311666c63165234f4c/extentreports-4.1.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.72/7ef123d5dfb6f839b41265648ff1be34982d50f8/jcommander-1.72-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.72/6375e521c1e11d6563d4f25a07ce124ccf8cd171/jcommander-1.72.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.72/b04f3ee8f5e43fa3b162981b50bb72fe1acabb33/jcommander-1.72-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/faf9ee8ac09eafd1128091426dd367a8c0085d55/guice-4.1.0-no_aop.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/ea11f69906201086c4e09eca556519ef7db77d8f/guice-4.1.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/ad09811315f1d4f5756986575b0ea16b99cd686f/hamcrest-core-1.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/3.141.59/b04f3ee8f5e43fa3b162981b50bb72fe1acabb33/selenium-java-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/3.141.59/e8e20b741299cb8ffedbd2925a3ab69d08b41063/selenium-java-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/3.141.59/b04f3ee8f5e43fa3b162981b50bb72fe1acabb33/selenium-java-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.141.59/7e42f1c3e43d22f2c299b74356137dc6f2f455ec/selenium-support-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.141.59/8735de5049acf0e761defc65ee5837d6541abaf5/selenium-support-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.141.59/547b425c17e5544690b540a28d2747f88e4394eb/selenium-support-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59/b7189fcb53e45dcce1f02cf71bfd7d1a38883fed/selenium-chrome-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59/67137314736c6a2f39a8aa59a562e9616ae5f77e/selenium-chrome-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/3.141.59/d6132044d9a5a29294ee3f8b7c4b4de482ca049d/selenium-chrome-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/3.141.59/22496e495104b01c0c38813b1a33285c83eecee9/selenium-edge-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/3.141.59/fc09c66f2d0b33b0816d770761ad1d599ef0df29/selenium-edge-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/3.141.59/247c679dbfc6c2f82fe7d69ef8d44f90bf3b1690/selenium-edge-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/3.141.59/d45a67c085bf718f01c35b3a87a58518ccfcfc92/selenium-firefox-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/3.141.59/a99f2fe2a42747ed9809d4f62f51a9e1b336dde8/selenium-firefox-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/3.141.59/77710c7ad0186d4efef1739e37f719c4f0ac4a5b/selenium-firefox-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/3.141.59/ecc72d92244d4f4dbe6d63814c383f0b29dc1b9f/selenium-ie-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/3.141.59/677b9b414a3a9bb2aeea89042a7b326edeb13a82/selenium-ie-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/3.141.59/3f859cd0a93676745a3dd84ba9763eccf01cbfb5/selenium-ie-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.141.59/69a0134c983c1cfcccc4b8630614bf05edffc9bd/selenium-opera-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.141.59/6b11ed01182bfd8bb62ddeae34cf9eadd3cfc7ff/selenium-opera-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.141.59/6859926040cec6b3588d117f9d1828ed09e20f0d/selenium-opera-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-safari-driver/3.141.59/42a01f2f3ba62d46d9a2e527668189b7cf64a06b/selenium-safari-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-safari-driver/3.141.59/a32b5b88f46ea4b0356079f0d2e2217543923046/selenium-safari-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-safari-driver/3.141.59/347d3e36644df567fd2890e0d2df5ca33e51109b/selenium-safari-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.141.59/8950c1557ead2cdba4fdb9ba6f107dce3b5f1520/selenium-remote-driver-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.141.59/1c79ca890c312ff9916bd95df4f0c5182ec722d8/selenium-remote-driver-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.141.59/63645b6cf4284d4b8deb6544d12ea4b69d6aa758/selenium-remote-driver-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/8e9423038552821844ba5f7713cc4c1e6d9835b7/selenium-api-3.141.59-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/e006ffd3aa7841e6e9125d9e6691b3a6b7592b05/selenium-api-3.141.59.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/cb78eeeb947686c3590f07442baa2f1ee85faf7c/selenium-api-3.141.59-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/1b9adea7bbe0b251818f42fde0bd2988d7e5f20a/gson-2.8.6-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/9180733b7df8542621dc12e21e87557e8c99b8cb/gson-2.8.6.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.6/6ca9f0d9c6cde89d811e4329c5f0c1225b4a8d0a/gson-2.8.6-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.experitest/seetest-client/12.12/45c2d5400d4a2d66f146645f577739217e6eb8a3/seetest-client-12.12.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.experitest/seetest-client/12.12/397e3346b580a5b310e7fca2fee1a114d762502e/seetest-client-12.12-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit/2.18/97102942534a45271e1f8d39bfa23d685b72c67e/htmlunit-2.18-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit/2.18/ec30f76601f7010abbc09cc8ec401cb183916371/htmlunit-2.18.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit/2.18/4ab57254c20d8dfe37f8376d75f5669abf932bf7/htmlunit-2.18-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/ca23fd61a082eab682fc0ffd29e37d09eab07180/httpmime-4.5.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/ac6e2d85df4048af97004a0ea120dd98685f0939/httpmime-4.5.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.9/88c1ea157c2a2aa51e24f6a916226e72a0c98e05/httpclient-4.5.9-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.9/a25c1be5ce99d0ce99aa43eb982868c796dd0775/httpclient-4.5.9.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.9/d82d42e0cfbdacf93e1640835f2e91055f1bbd46/httpclient-4.5.9-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/cglib/cglib/3.2.12/539419fb0a3142f14c61acb5b82e1b7eba470d3a/cglib-3.2.12-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/cglib/cglib/3.2.12/16c0d1d8b5d50ea9ad38c1f6f9f1e35a42727bf0/cglib-3.2.12.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/cglib/cglib/3.2.12/76e387fe5b9da7b1c46e2d3b7d1895830fb53327/cglib-3.2.12-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.6/a8767cdd63c800f00df9c2fc5604a8f7648fe832/commons-validator-1.6-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.6/e989d1e87cdd60575df0765ed5bac65c905d7908/commons-validator-1.6.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.6/48f9ff1edd4f5512a366a5b5024ad5a2f8136801/commons-validator-1.6-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.9/8f1cb192e229bc4cd1c900c51171d96706e6d195/commons-lang3-3.9-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.9/122c7cee69b53ed4a7681c03d4ee4c0e2765da5/commons-lang3-3.9.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.9/9872098000a4d91f9bbd1ad42859553ccaed0e0c/commons-lang3-3.9-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.6/2566800dc841d9d2c5a0d34d807e45d4107dbbdf/commons-io-2.6-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.6/815893df5f31da2ece4040fe0a12fd44b577afaf/commons-io-2.6.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.6/38ce4d06c1917fa2f2b1dde31bd111223ac7a551/commons-io-2.6-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.1.8.RELEASE/837c4548bff5d8795b6c436120512f8cc9af6fb8/spring-context-5.1.8.RELEASE-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.1.8.RELEASE/83ab599b042a4805bbee71b6241e9d073022d704/spring-context-5.1.8.RELEASE.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.1.8.RELEASE/4dc83d952f39f3654c3f8c429d3e4e0789ed2a4/spring-context-5.1.8.RELEASE-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.4/2966bd81d1df3fb51d018e59413de6965a845fa7/aspectjweaver-1.9.4-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.4/9205229878f3d62fbd3a32a0fb6be2d6ad8589a9/aspectjweaver-1.9.4.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.4/84cced3c419f39f5d471a17efc619d9286bd0957/aspectjweaver-1.9.4-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/21c84cdf9da108216b5e402611d4af479b60cb8/slf4j-api-1.7.26-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/77100a62c2e6f04b53977b9f541044d7d722693d/slf4j-api-1.7.26.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/83863db711c68b9d5542c5fa0cd801b7035281d7/slf4j-api-1.7.26-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.13/226247b40160f2892fa4c7851b5b913d5d10912d/commons-codec-1.13-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.13/3f18e1aa31031d89db6f01ba05d501258ce69d2c/commons-codec-1.13.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.13/7c86471d2fb1ab7c817d2410eaae96d6447bee4/commons-codec-1.13-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/6260e416ff273ee938b31b0a8e512a367b1ee500/commons-collections4-4.4-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/8baf13b7fc0266b4e0791dd081f03189155e68e0/commons-collections4-4.4-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/8fab23986ea8886af34818daf32a718e81dc98ba/commons-math3-3.6.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf/commons-math3-3.6.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/2e894b7acae199b5dff08bb596334594b5f23c28/commons-math3-3.6.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-schemas/4.1.1/7bb506f074a5bffce6b367f40ee0535fa7f73003/poi-ooxml-schemas-4.1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.19/9c242093f81288289bc433e383c8a8de89489406/commons-compress-1.19-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.19/7e65777fb451ddab6a9c054beb879e521b7eab78/commons-compress-1.19.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.19/3798c71b40dcf889e28199f4f5a6443428238f07/commons-compress-1.19-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.06/48404d3d9cfeb13c15d9bff1e11cccc7e4cb8f48/curvesapi-1.06-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.06/159dd2e8956459a4eb0a9a6ecda9004d8d289708/curvesapi-1.06.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.06/9d3e8c6586bfb4c89707bbaab55c627c8217e63/curvesapi-1.06-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.6.1/b0782bcd21ad5c52031e74efbc4c3d6a6df96130/protobuf-java-3.6.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.6.1/d06d46ecfd92ec6d0f3b423b4cd81cb38d8b924/protobuf-java-3.6.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.6.1/15540aa7434fcfa6d329bcd8a27b95e7c3b172bf/protobuf-java-3.6.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/53746de93a0b30f346c082074a40c01a6cebdfa7/commons-beanutils-1.9.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/7a87d845ad3a155297e8f67d9008f4c1e5656b71/commons-beanutils-1.9.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/260d4574ff5a3ab34db4d06aae8dfa368c2d2dd1/commons-beanutils-1.9.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/78c50ebda5784937ca1615fc0e1d0cb35857d572/commons-collections-3.2.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/ea9a113ab0147c4d48dda62dff207be07374c590/commons-collections-3.2.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.29/89f6c30ecede4792e0b2aeffb6998f1d9340a983/freemarker-2.3.29-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.29/46005eeee02e4458520c85d0bcf5001467b053c3/freemarker-2.3.29.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.29/eba9841fb1b0d6cf9f111fbc3bbe493a8282b242/freemarker-2.3.29-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver/3.12.0/f0eceda530f3fcdce1ff526ff9d5481f435d828a/mongodb-driver-3.12.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver/3.12.0/bc97beca0e881a14fa86a59a8d15f2385b87a958/mongodb-driver-3.12.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver/3.12.0/5d5d9e73ede0f65a88b05cc05a51eb920672a8b7/mongodb-driver-3.12.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/3.12.0/3aeb47108421dab3829029f0bc332492cc152857/mongodb-driver-core-3.12.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/3.12.0/5b80ac9aec034e8a07a6df87cd449958893c13d0/mongodb-driver-core-3.12.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/3.12.0/913d467c909499bdd83b21f4e28296e89373b9b/mongodb-driver-core-3.12.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/bson/3.12.0/f29a3ba52bbba89d3f3a8c55d42438874edf8ea2/bson-3.12.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/bson/3.12.0/973b8f3e4bf17ed4b1d9a6bcc59ebb4e5635d813/bson-3.12.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.mongodb/bson/3.12.0/a31df7778104555e2048bb08ac2b89c135607bee/bson-3.12.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/70ec961c25111ed9015d1af77772d96383c2d238/javax.inject-1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/25.0-jre/30ade485699e7782cc2369b0e5d3d8e0bfc317c/guava-25.0-jre-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/25.0-jre/7319c34fa5866a85b6bad445adad69d402323129/guava-25.0-jre.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/25.0-jre/4e515cb276c07e45f17e75897d38e54bf01049f2/guava-25.0-jre-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.8.15/a8f95953d78effdd8eca80e92c5b62f648b4a1f5/byte-buddy-1.8.15-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.8.15/cb36fe3c70ead5fcd016856a7efff908402d86b8/byte-buddy-1.8.15.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.8.15/391ee74ae038835ae997df3570bade55dddef08f/byte-buddy-1.8.15-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/efd2543e352e55ce5a685eed6db8af028b737905/commons-exec-1.3-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/8dfb9facd0830a27b1b5f29f84593f0aeee7773b/commons-exec-1.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/e4cd47daebd31ac59410ec62e7e5ff835f16e28a/commons-exec-1.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.11.0/cf16b99519850b1adc3b259c90fd8566a0f592f3/okhttp-3.11.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.11.0/75966e05a49046ca2ae734e5626f28837a8d1e82/okhttp-3.11.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.11.0/746512619e9c200a0ed8d08d96e43d7bbb7916c6/okhttp-3.11.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/e7c96b4fe5651490d8f3c022042940d743a3bdd9/okio-1.14.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/102d7be47241d781ef95f1581d414b0943053130/okio-1.14.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/d224a05c7368dc02ffefc74a8b628c86f0bea501/okio-1.14.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.11/95167d269607b358ba3ed7030ccd336dad8591a0/httpcore-4.4.11-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.11/de748cf874e4e193b42eceea9fe5574fabb9d4df/httpcore-4.4.11.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.11/c2c08d1393c721ee517c9acc59fac269fb944d58/httpcore-4.4.11-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/83033ee697035dfb9ce3503e1ac0c5a33021e503/commons-logging-1.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/7.1/9d170062d595240da35301362b079e5579c86f49/asm-7.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/7.1/fa29aa438674ff19d5e1386d2c3527a0267f291e/asm-7.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/7.1/c9fc020e4f8720a02b9ede027883b15f645c444c/asm-7.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/3165d0f4fec8cd6836e7a3bc2986b3ff2bd101d/commons-digester-1.8.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/3dec9b9c7ea9342d4dbe8c38560080d85b44a015/commons-digester-1.8.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/d454e61fb3a9bddac218187d76c1f48ae712a30a/commons-digester-1.8.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.8.RELEASE/c15860849c0fd44411b990181ffb1d49fb5ddf69/spring-aop-5.1.8.RELEASE-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.8.RELEASE/c013c5603a05bee2a80cc2ec8f3fc11b15d4de3a/spring-aop-5.1.8.RELEASE.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.8.RELEASE/f91dc2db8a931e58694c834a1ca19a5a4c86c88a/spring-aop-5.1.8.RELEASE-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.1.8.RELEASE/70ce5cb63540ea0a184a49d454844e9d9f21fbd5/spring-beans-5.1.8.RELEASE-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.1.8.RELEASE/e35fa81d0142ef7c1247a7dee8b1ef2dd78c6322/spring-beans-5.1.8.RELEASE.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.1.8.RELEASE/be9a6e91be943c5388352ecaaac46522c3859454/spring-beans-5.1.8.RELEASE-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.1.8.RELEASE/680c8fc07cf10667e5f4a38342ea37c45a94e700/spring-expression-5.1.8.RELEASE-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.1.8.RELEASE/4f8340d8d4f52dbd527bd696358923ff4df5be1a/spring-expression-5.1.8.RELEASE.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.1.8.RELEASE/7bc93b27ea43e76c9bb12b2fc9d5c8271c92048c/spring-expression-5.1.8.RELEASE-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.8.RELEASE/c69e51041b6606d93b8a452714b184a8c8f5f9a6/spring-core-5.1.8.RELEASE-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.8.RELEASE/37fd45c92cfd05b9ad173ee1184ec4221e0f931f/spring-core-5.1.8.RELEASE.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.8.RELEASE/6d7f809bde584529e54cbf9d66ca9c9c99412006/spring-core-5.1.8.RELEASE-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlrpc/xmlrpc-client/3.1.2/6d87825f9368e87891a3677ed97d9446c3f7061/xmlrpc-client-3.1.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlrpc/xmlrpc-client/3.1.2/ca8c57a1c4abc23b75b15ad636b4d20274f021c2/xmlrpc-client-3.1.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlrpc/xmlrpc-client/3.1.2/c7ed20803e891300649a24d83b30ea7e7ff2534c/xmlrpc-client-3.1.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/io.fastjson/boon/0.33/a2393f842d4ce585268cfce59040744178db3f50/boon-0.33-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/io.fastjson/boon/0.33/5058c9c345402691d471d466a640213c2e8fb407/boon-0.33.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/io.fastjson/boon/0.33/b415745cf0b4050ed229c44722ab6e77e80f55d6/boon-0.33-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.experitest/manager-client-api/12.12/ed4295633e5d078aeb1621eade22d710b1f799ef/manager-client-api-12.12.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/3.1.0/d4973a8bf57cb9aaeb24679137789bbf873a7b5f/xmlbeans-3.1.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/3.1.0/6dac1f897dfb3e3f17fc79b18a3353b2e51c464e/xmlbeans-3.1.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/3.1.0/39ec098ca0363678c3117112ba7c79423a6aa520/xmlbeans-3.1.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.2/fe9c3d37a49238fac9d4d6c4f5bbd8c334da787a/xalan-2.7.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.2/d55d3f02a56ec4c25695fe67e1334ff8c2ecea23/xalan-2.7.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.2/17597b2ce707acc76488ecba8c8186697eb85119/xalan-2.7.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit-core-js/2.17/c54d38efe959a8c30336e6c8c671c05b0f99266a/htmlunit-core-js-2.17-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit-core-js/2.17/4316d68f449d42f69faf4ee255aa31b03e4f7dd5/htmlunit-core-js-2.17.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit-core-js/2.17/c9f62622588ceb5669e14b39f26b0dcf040b6b1d/htmlunit-core-js-2.17-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/af86e59459a503adec5e9b47426dd9fa2ac5f1f6/xercesImpl-2.11.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/9bb329db1cfc4e22462c9d6b43a8432f5850e92c/xercesImpl-2.11.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/3b1288d462866db6ea33593d5b3898b48eb75d3e/xercesImpl-2.11.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.nekohtml/nekohtml/1.9.22/88eb858a017e4a4ba762a9968da59ed57fc08898/nekohtml-1.9.22-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.nekohtml/nekohtml/1.9.22/4f54af68ecb345f2453fb6884672ad08414154e3/nekohtml-1.9.22.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.nekohtml/nekohtml/1.9.22/18a2e4e29d2812c42dc4951641966361f672bc7d/nekohtml-1.9.22-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.cssparser/cssparser/0.9.16/3be2241a11dca58b1f752837c191b499bd90e719/cssparser-0.9.16-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.cssparser/cssparser/0.9.16/3f751904d467537b8ee99c612e69d4e79d6271cf/cssparser-0.9.16.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/net.sourceforge.cssparser/cssparser/0.9.16/99233ff3d7b04ff4c6c712f03f757768a584eda3/cssparser-0.9.16-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-client/9.2.12.v20150709/35f8ee9c48626d8ee13f360d42dd30729fbf8971/websocket-client-9.2.12.v20150709-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-client/9.2.12.v20150709/79e439a426514af24e693c78662cb2b4db2be3c6/websocket-client-9.2.12.v20150709.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-client/9.2.12.v20150709/a2f4e173b647a61a6c03baa1672034f65a9e510e/websocket-client-9.2.12.v20150709-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.0.0/eb7f7d588d0aef07a2c89178053c2a9e4613947f/checker-compat-qual-2.0.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.0.0/fc89b03860d11d6213d0154a62bcd1c2f69b9efa/checker-compat-qual-2.0.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.0.0/74e101e1a06fb4744b298ec4067b73695b6f294e/checker-compat-qual-2.0.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.1.3/990fe1fd48078a2befecdfcebcad8e6e1bd195a0/error_prone_annotations-2.1.3-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.1.3/39b109f2cd352b2d71b52a3b5a1a9850e1dc304b/error_prone_annotations-2.1.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.1.3/28ea6f81741992c53c5f8030995604345606dd9d/error_prone_annotations-2.1.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/1efdf5b737b02f9b72ebdec4f72c37ec411302ff/j2objc-annotations-1.1-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/5d415cbe46a293283658196abdb9e6d06dc68ccf/j2objc-annotations-1.1-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/886474da3f761d39fcbb723d97ecc5089e731f42/animal-sniffer-annotations-1.14-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/d90e19c7bc3a594aac2307bcfe9f2362ec4108ea/animal-sniffer-annotations-1.14-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.1.8.RELEASE/e65a1f257b4441677454b9058c635c568c62fb3f/spring-jcl-5.1.8.RELEASE-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.1.8.RELEASE/60a3bb9c802ea03c955ee26526f8aebc9dd712b6/spring-jcl-5.1.8.RELEASE.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.1.8.RELEASE/215bab9cb527f0621b34a250fa1168144713ef83/spring-jcl-5.1.8.RELEASE-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlrpc/xmlrpc-common/3.1.2/26a815d474d53ee8db3dbdf7b32fee56346efeec/xmlrpc-common-3.1.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlrpc/xmlrpc-common/3.1.2/a8b0084839aee2f48113b3dc2517b8022a5fbc0f/xmlrpc-common-3.1.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.xmlrpc/xmlrpc-common/3.1.2/7d21b3b4d0dfe868fa260bc0d97e49ad20772a1a/xmlrpc-common-3.1.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.2/fe9c3d37a49238fac9d4d6c4f5bbd8c334da787a/serializer-2.7.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.2/24247f3bb052ee068971393bdb83e04512bb1c3c/serializer-2.7.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.2/17597b2ce707acc76488ecba8c8186697eb85119/serializer-2.7.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/5502da0c4c0a7916a604356ef19394ccfa30cd4b/xml-apis-1.4.01-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/bec4716e07b42754be3c0eca6705714893c97f37/xml-apis-1.4.01-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.w3c.css/sac/1.3/d0eab9163d161293dcd1e291bc2b6b09b4b5c717/sac-1.3-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.w3c.css/sac/1.3/cdb2dcb4e22b83d6b32b93095f644c3462739e82/sac-1.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.2.12.v20150709/63ba6e877aae9ec603618519685e8150d0a7d397/websocket-common-9.2.12.v20150709-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.2.12.v20150709/97219331c7ec90b2964b3a50d86008e1f16f5638/websocket-common-9.2.12.v20150709.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.2.12.v20150709/7c6337967fcddd67794dd2d6f48cae445fdec2ed/websocket-common-9.2.12.v20150709-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.2.12.v20150709/403de68989c5266538d381c0f67ec8013e6d1950/jetty-io-9.2.12.v20150709-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.2.12.v20150709/c02e9e303d231a589e0c8866c1ee89bcdeb40a55/jetty-io-9.2.12.v20150709.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.2.12.v20150709/538eb2a114c9233ef261ecfb82d6d70a0b02c138/jetty-io-9.2.12.v20150709-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.2.12.v20150709/dde0140cfe53d9ef8f950fdeeff7a10184e29a7c/jetty-util-9.2.12.v20150709-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.2.12.v20150709/d99d38adfdb5ec677643f04fa862554b0bb8b42e/jetty-util-9.2.12.v20150709.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.2.12.v20150709/40f805e6c87a0b5ce5b1ec431e9e00f7b3dd86f6/jetty-util-9.2.12.v20150709-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.ws.commons.util/ws-commons-util/1.0.2/f978561682c1c405aab6b0abc5d584faeb35933c/ws-commons-util-1.0.2-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.ws.commons.util/ws-commons-util/1.0.2/3f478e6def772c19d1053f61198fa1f6a6119238/ws-commons-util-1.0.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.ws.commons.util/ws-commons-util/1.0.2/95d0df23b6c1feea10f22c88f905b1640dcedb77/ws-commons-util-1.0.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-api/9.2.12.v20150709/5a906a75bb9f8b9b325734cbbaf99066a9aa73e2/websocket-api-9.2.12.v20150709-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-api/9.2.12.v20150709/6bb55e8ef1a385e40f144a240492915b89914cfb/websocket-api-9.2.12.v20150709.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-api/9.2.12.v20150709/4f3e591ffebf43dcfa3de04b5ccc4b8b1eb29739/websocket-api-9.2.12.v20150709-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.7/f9ff67a7268d35359ecf5547e4aae0bd775b3962/httpmime-4.5.7-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.7/cc971b74052f1c949581e257c6580ef3662eac7a/httpmime-4.5.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.7/34b26c4fd38b82d3cd5cac4dedcbcaaeca2deb3b/httpmime-4.5.7-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/9d70af7c5982bd09c33efa97ac98cee6363ba0f0/commons-beanutils-1.9.3-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/c845703de334ddc6b4b3cd26835458cb1cba1f3d/commons-beanutils-1.9.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/84b8fbacdf1e778d700c49057ddc876bea234839/commons-beanutils-1.9.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.7/26d2e8a615ae6d766bbaed952a9cc286f6860faf/jackson-databind-2.9.7-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.7/e6faad47abd3179666e89068485a1b88a195ceb7/jackson-databind-2.9.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.7/cd148b7a4e95842b6fee6a823f545d1ecc89f789/jackson-databind-2.9.7-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/a0ad4e203304ccab7e01266fa814115850edb8a9/jackson-annotations-2.9.0-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/7c10d545325e3a6e72e06381afe469fd40eb701/jackson-annotations-2.9.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/9978adad2c78154ca4aca7cd2a71941e1278f724/jackson-annotations-2.9.0-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.7/478a76e0ca46b25648abce6ad4858cde5e8488ec/jackson-core-2.9.7-sources.jar" kind="lib" path="C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.7/4b7f0e0dc527fab032e9800ed231080fdc3ac015/jackson-core-2.9.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/rosha/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.7/b4f0c45a4dfdc423f0c65b20fff29db506fdda6f/jackson-core-2.9.7-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
 </classpath>
