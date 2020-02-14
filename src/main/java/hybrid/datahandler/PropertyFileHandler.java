@@ -8,15 +8,15 @@ import java.util.Properties;
 import hybrid.HybridConstants;
 
 public class PropertyFileHandler {
-	
+
 	private Properties property = new Properties();
 	private String propFileName = null;
-	
+
 	public PropertyFileHandler(String filename) {
 		setPropFileName(filename);
 		serPropertyFileName(filename);
 	}
-	
+
 	public String getPropFileName() {
 		return propFileName;
 	}
@@ -26,15 +26,14 @@ public class PropertyFileHandler {
 	}
 
 	public void serPropertyFileName(String filename) {
-		
+
 		try {
-			if(filename != null) {
+			if (filename != null) {
 				BufferedReader inputStream = new BufferedReader(
-						new InputStreamReader(new FileInputStream(getPropFileName()), HybridConstants.UTF8Format));
+						new InputStreamReader(new FileInputStream(getPropFileName()), HybridConstants.UTF8_FORMAT));
 				property.load(inputStream);
 			} else {
-				throw new Exception(
-						"The property file name value provided is null.\n\n");
+				throw new Exception("The property file name value provided is null.\n\n");
 			}
 
 		} catch (Exception e) {
@@ -51,13 +50,12 @@ public class PropertyFileHandler {
 
 			if (key != null) {
 				result = property.getProperty(key);
-				if(result == null) {
+				if (result == null) {
 					throw new Exception(
 							"The Key - " + key + " is not found in the File -  " + getPropFileName() + "\n\n");
 				}
 			} else {
-				throw new Exception(
-						"The Key value provided is null.\n\n");
+				throw new Exception("The Key value provided is null.\n\n");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,15 +64,14 @@ public class PropertyFileHandler {
 
 		return result;
 	}
-	
+
 	public String getProperty(String Key, String propFileName) {
-			serPropertyFileName(propFileName);
-			return getProperty(Key);
+		serPropertyFileName(propFileName);
+		return getProperty(Key);
 	}
-	
-	
-	protected String getProperty(String key, Properties props) {
-		
+
+	public String getProperty(String key, Properties props) {
+
 		property = props;
 		if (System.getProperty(key) != null) {
 			return System.getProperty(key);

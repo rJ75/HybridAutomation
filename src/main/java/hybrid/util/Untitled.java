@@ -56,7 +56,7 @@ public class Untitled {
 		driver.setLogLevel(Level.INFO);
 	}
 
-	@Test
+//	@Test
 	public void testdummy() {
 //		 driver.get("http://www.google.com");
 //	        String pageSource1 = driver.getPageSource();

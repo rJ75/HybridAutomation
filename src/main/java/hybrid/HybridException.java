@@ -20,12 +20,11 @@ public class HybridException extends Exception {
 	}
 	
 	public void handleException() {
-		System.out.println("***************************************************************************************************");
-		System.out.println("Exception occured : \n");
-		System.out.println(getExceptionMessage());
-		System.out.println(getMessage());
+		System.err.println("\n\n***************************************************************************************************");
+		System.err.println("Exception occured : \n");
+		System.err.println(getExceptionMessage()+"\n");
 		printStackTrace();
-		System.out.println("***************************************************************************************************");
+		System.err.println("***************************************************************************************************");
 		System.out.println("\n\n");
 	}
 	
