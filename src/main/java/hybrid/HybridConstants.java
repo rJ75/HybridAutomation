@@ -1,14 +1,22 @@
 package hybrid;
 
+import java.io.File;
 import java.util.Arrays;
 
 public class HybridConstants {
 
 	public static final String UTF8_FORMAT = "UTF8";
-	public static final String HYBRID_CONFIG_PROPERTY_FILE = "HybridConfig.properties";
+	public static final String PROPERTIES_EXTENSION = ".properties";
+	public static final String HYBRID_CONFIG_PROPERTY_FILE = "HybridConfig" + PROPERTIES_EXTENSION;
+	public static final String CONFIG_PROPERTIES_FOLDER = "Resources" + File.separator + "HybridAutomation"
+			+ File.separator + "ConfigProperties";
+	public static final String APPLICATION_TEST_PARENT_FOLDER = "src" + File.separator + "test" + File.separator
+			+ "java";
+	public static final String APPLICATION_RESOURCES_PARENT_FOLDER = "Resources";
+	public static String applicationConfigFile;
 
 	enum ExecutionPlatform {
-		
+
 		MOBILE("Mobile"), MOBILE_WEB("MobileWeb"), WEB("Web"), API("API");
 
 		private String platform;
@@ -32,7 +40,7 @@ public class HybridConstants {
 	}
 
 	enum ExecutionPlatformHost {
-		
+
 		MOBILE("MobileExecutionHost"), MOBILE_WEB("MobileWebExecutionHost"), WEB("WebExecutionHost");
 
 		private String platformHost;
@@ -48,10 +56,11 @@ public class HybridConstants {
 
 		protected void setExecutionPlatformHostValue(String platformHostValue) throws HybridException {
 			platformHostValue = platformHostValue.trim();
-			if(Arrays.toString(PlatformHosts.values()).contains(platformHostValue)) {
+			if (Arrays.toString(PlatformHosts.values()).contains(platformHostValue)) {
 				this.platformHostValue = PlatformHosts.valueOf(platformHostValue).toString();
 			} else {
-				throw new HybridException("Host value from config parameter" + platformHost + " is not matching with predefined values");
+				throw new HybridException(
+						"Host value from config parameter" + platformHost + " is not matching with predefined values");
 			}
 		}
 
@@ -59,14 +68,14 @@ public class HybridConstants {
 			return platformHostValue;
 		}
 	}
-	
-	private enum PlatformHosts{
-		
-		LOCAL,GRID;
+
+	enum PlatformHosts {
+
+		LOCAL, GRID;
 	}
 
 	enum ExecutionTool {
-		
+
 		MOBILE_TOOL("MobileTool"), MOBILE_WEB_TOOL("MobileWebTool"), WEB_TOOL("WebTool");
 
 		private String executionTool;
@@ -80,27 +89,28 @@ public class HybridConstants {
 			return executionTool;
 		}
 
-		protected String getExecutionToolValue() {
+		public String getExecutionToolValue() {
 			return executionToolValue;
 		}
-		
+
 		protected void setExecutionToolValue(String executionToolValue) throws HybridException {
 			executionToolValue = executionToolValue.trim();
-			if(Arrays.toString(Tools.values()).contains(executionToolValue)) {
+			if (Arrays.toString(Tools.values()).contains(executionToolValue)) {
 				this.executionToolValue = Tools.valueOf(executionToolValue).toString();
 			} else {
-				throw new HybridException("Host value from config parameter" + executionTool + " is not matching with predefined values");
+				throw new HybridException(
+						"Host value from config parameter" + executionTool + " is not matching with predefined values");
 			}
 		}
 	}
-	
-	private enum Tools{
-		
-		APPIUMSTUDIO, SEETEST, PERFECTO, HEADSPIN, SELENIUM;
+
+	enum Tools {
+
+		APPIUMSTUDIO, SEETEST, PERFECTO, HEADSPIN, SELENIUM, SAUCELABS, PCLOUDY, APPIUM;
 	}
 
 	enum MobileExecutionPlatform {
-		
+
 		ANDROID("Android"), IPHONE("iPhone"), IPAD("iPad"), ANDROID_WEB("AndroidWeb"), IPHONE_WEB("iPhoneWeb"),
 		IPAD_WEB("iPadWeb");
 
@@ -115,7 +125,7 @@ public class HybridConstants {
 			return executionPlatform;
 		}
 
-		protected boolean getExecutionPlatformValue() {
+		public boolean getExecutionPlatformValue() {
 			return executionPlatformValue;
 		}
 
@@ -125,7 +135,7 @@ public class HybridConstants {
 	}
 
 	enum WebExecutionPlatform {
-		
+
 		CHROME("Chrome"), FIREFOX("FireFox"), IE("IE"), EDGE("Edge"), SAFARI("Safari"), OPERA("Opera");
 
 		private String executionPlatform;
@@ -139,7 +149,7 @@ public class HybridConstants {
 			return executionPlatform;
 		}
 
-		protected boolean getExecutionPlatformValue() {
+		public boolean getExecutionPlatformValue() {
 			return executionPlatformValue;
 		}
 
@@ -148,15 +158,14 @@ public class HybridConstants {
 		}
 	}
 
-	enum TestData {
-		
-		TEST_DATA_SOURCE("TestDataSource"), TEST_REPOSITORY_NAME("TestRepositoryName"),
-		OBJECT_REPOSITORY_NAME("ObjectRepositoryName");
+	enum TestDataOption {
+
+		TEST_DATA_SOURCE("TestDataSource");
 
 		private String testDataOption;
 		private String testDataOptionValue;
 
-		TestData(String testDataOption) {
+		TestDataOption(String testDataOption) {
 			this.testDataOption = testDataOption.trim();
 		}
 
@@ -164,23 +173,29 @@ public class HybridConstants {
 			return testDataOption;
 		}
 
-		protected String getTestDataOptionValue() {
+		public String getTestDataOptionValue() {
 			return testDataOptionValue;
 		}
 
-		protected void setTestDataOptionValue(String testDataOptionValue) {
-			this.testDataOptionValue = testDataOptionValue.trim();
+		protected void setTestDataOptionValue(String testDataOptionValue) throws HybridException {
+			testDataOptionValue = testDataOptionValue.trim();
+			if (Arrays.toString(TestDataSources.values()).contains(testDataOptionValue)) {
+				this.testDataOptionValue = TestDataSources.valueOf(testDataOptionValue).toString();
+			} else {
+				throw new HybridException("Host value from config parameter" + testDataOption
+						+ " is not matching with predefined values");
+			}
 		}
 	}
-	
+
 	enum TestDataSources {
-		
+
 		DB, EXCEL, CSV, PROPERTIES, JSON, XML, YAML;
 	}
 
 	enum Report {
-		
-		REPORT("Report"), APPEND("Append"), REPORT_DIRECTORY("ReportDirectory"),
+
+		REPORT_TYPE("ReportType"), APPEND_REPORT("AppendReport"), REPORT_DIRECTORY("ReportDirectory"),
 		PROJECT_BASE_DIRECTORY("ProjectBaseDirectory");
 
 		private String reportOption;
@@ -194,7 +209,7 @@ public class HybridConstants {
 			return reportOption;
 		}
 
-		protected String getReportOptionValue() {
+		public String getReportOptionValue() {
 			return reportOptionValue;
 		}
 
@@ -204,8 +219,9 @@ public class HybridConstants {
 	}
 
 	enum Applicaton {
-		
-		AUT_NAME("AUTName");
+
+		AUT_NAME("AUTName"), ANDROID_APP_NAME("AndroidAppName"), IOS_APP_NAME("iOSAppName"),
+		WEB_APP_ADDRESS("WebAppAddress"), ANDROID_APP_ACTIVITY("AndroidAppActivity");
 
 		private String applicationOption;
 		private String applicationOptionValue;
@@ -218,7 +234,7 @@ public class HybridConstants {
 			return applicationOption;
 		}
 
-		protected String getApplicationOptionValue() {
+		public String getApplicationOptionValue() {
 			return applicationOptionValue;
 		}
 
@@ -227,8 +243,8 @@ public class HybridConstants {
 		}
 	}
 
-	public enum FLAGS {
-		
+	enum FLAGS {
+
 		ON("ON", true), OFF("OFF", false);
 
 		private String flag;
@@ -255,6 +271,234 @@ public class HybridConstants {
 			this.flagBoolean = flagBoolean;
 		}
 	}
-	
 
+	enum DBConfig {
+
+		TEST_REPOSITORY_NAME("TestRepositoryName"), OBJECT_REPOSITORY_NAME("ObjectRepositoryName"),
+		DRIVER_CLASS("DriverClass"), DB_URL("DBUrl"), DB_USERNAME("DBUsername"), DB_PASSWORD("DBPassword"),
+		TEST_QUERY("TestQuery");
+
+		private String dbConfigOption;
+		private String dbConfigOptionValue;
+
+		DBConfig(String dbConfigOption) {
+			this.dbConfigOption = dbConfigOption.trim();
+		}
+
+		protected String getDBConfigOption() {
+			return dbConfigOption;
+		}
+
+		public String getDBConfigOptionValue() {
+			return dbConfigOptionValue;
+		}
+
+		protected void setDBConfigOptionValue(String dbConfigOptionValue) {
+			this.dbConfigOptionValue = dbConfigOptionValue.trim();
+		}
+	}
+
+	enum COMMON_OBJECTS {
+		MOBILE_COMMON, MOBILE_WEB_COMMON, WEB_COMMON;
+	}
+
+	enum PerfectoConfig {
+
+		CLOUD_URL("PerfectoCloudURL"), USERNAME("PerfectoUsername"), PASSWORD("PerfectoPassword"),
+		ACCESSKEY("PerfectoAccessKey"), LOCAL_URL("PerfectoLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		PerfectoConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+
+	enum SeeTestConfig {
+
+		CLOUD_URL("SeeTestCloudURL"), USERNAME("SeeTestUsername"), PASSWORD("SeeTestPassword"),
+		ACCESSKEY("SeeTestAccessKey"), LOCAL_URL("SeeTestLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		SeeTestConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+
+	enum HeadSpinConfig {
+
+		CLOUD_URL("HeadSpinCloudURL"), USERNAME("HeadSpinUsername"), PASSWORD("HeadSpinPassword"),
+		ACCESSKEY("HeadSpinAccessKey"), LOCAL_URL("HeadSpinLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		HeadSpinConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+
+	enum SauceLabsConfig {
+
+		CLOUD_URL("SauceLabsCloudURL"), USERNAME("SauceLabsUsername"), PASSWORD("SauceLabsPassword"),
+		ACCESSKEY("SauceLabsAccessKey"), LOCAL_URL("SauceLabsLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		SauceLabsConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+
+	enum PCloudyConfig {
+
+		CLOUD_URL("PCloudyCloudURL"), USERNAME("PCloudyUsername"), PASSWORD("PCloudyPassword"),
+		ACCESSKEY("PCloudyAccessKey"), LOCAL_URL("PCloudyLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		PCloudyConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+
+	enum AppiumStudioConfig {
+
+		CLOUD_URL("AppiumStudioCloudURL"), USERNAME("AppiumStudioUsername"), PASSWORD("AppiumStudioPassword"),
+		ACCESSKEY("AppiumStudioAccessKey"), LOCAL_URL("AppiumStudioLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		AppiumStudioConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+
+	enum SeleniumConfig {
+
+		CLOUD_URL("SeleniumCloudURL"), USERNAME("SeleniumUsername"), PASSWORD("SeleniumPassword"),
+		ACCESSKEY("SeleniumAccessKey"), LOCAL_URL("SeleniumLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		SeleniumConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
+	
+	enum AppiumServerConfig {
+
+		CLOUD_URL("AppiumServerCloudURL"), USERNAME("AppiumServerUsername"), PASSWORD("AppiumServerPassword"),
+		ACCESSKEY("AppiumServerAccessKey"), LOCAL_URL("AppiumServerLocalURL");
+
+		private String configOption;
+		private String configOptionValue;
+
+		AppiumServerConfig(String configOption) {
+			this.configOption = configOption.trim();
+		}
+
+		public String getConfigOption() {
+			return configOption;
+		}
+
+		public String getConfigOptionValue() {
+			return configOptionValue;
+		}
+
+		public void setConfigOptionValue(String configOptionValue) {
+			this.configOptionValue = configOptionValue.trim();
+		}
+	}
 }
