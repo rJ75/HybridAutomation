@@ -367,33 +367,32 @@ public class HybridTestData extends HybridReporter {
 
 		String object = null;
 		try {
-			String query = String.format("%s %s %s %s %s", "SELECT * FROM",
-					DBConfig.OBJECT_REPOSITORY_NAME.getDBConfigOptionValue(), "WHERE SCREEN =", screenName,
-					"AND OBJECT =", objectName);
-			result = dbHandler.executeQuery(query);
-			if (result.isLast()) {
-				result.next();
-				object = result.getString(platform);
-				if (object == null || object.isEmpty()) {
-					if (platform.equalsIgnoreCase(MobileExecutionPlatform.ANDROID.getExecutionPlatform())
-							|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPHONE.getExecutionPlatform())
-							|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPAD.getExecutionPlatform())) {
-						object = result.getString(COMMON_OBJECTS.MOBILE_COMMON.name());
-					} else if (platform.equalsIgnoreCase(MobileExecutionPlatform.ANDROID_WEB.getExecutionPlatform())
-							|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPHONE_WEB.getExecutionPlatform())
-							|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPAD_WEB.getExecutionPlatform())) {
-						object = result.getString(COMMON_OBJECTS.MOBILE_WEB_COMMON.name());
-					} else if (Arrays.toString(WebExecutionPlatform.values()).contains(platform)) {
-						object = result.getString(COMMON_OBJECTS.WEB_COMMON.name());
-					} else if (object == null || object.isEmpty()) {
-						throw new HybridException("Value is null for the given object");
-					}
-				}
-			} else {
-				throw new HybridException("Duplicate Objects in DB");
+			String query = String.format("%s %s %s%s%s%s%s", "SELECT * FROM",
+					DBConfig.OBJECT_REPOSITORY_NAME.getDBConfigOptionValue(), "WHERE SCREEN ='", screenName,
+					"' AND OBJECT ='", objectName, "'");
+		
+//		String query = "SELECT * FROM " + DBConfig.OBJECT_REPOSITORY_NAME.getDBConfigOptionValue() + " WHERE screen = '" + screenName + "' AND object = '" + objectName + "'";
+		System.out.println(query);	
+		result = dbHandler.executeQuery(query);
+		result.next();
+		object = result.getString(platform);
+		if (object == null || object.isEmpty()) {
+			if (platform.equalsIgnoreCase(MobileExecutionPlatform.ANDROID.getExecutionPlatform())
+					|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPHONE.getExecutionPlatform())
+					|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPAD.getExecutionPlatform())) {
+				object = result.getString(COMMON_OBJECTS.MOBILE_COMMON.name());
+			} else if (platform.equalsIgnoreCase(MobileExecutionPlatform.ANDROID_WEB.getExecutionPlatform())
+					|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPHONE_WEB.getExecutionPlatform())
+					|| platform.equalsIgnoreCase(MobileExecutionPlatform.IPAD_WEB.getExecutionPlatform())) {
+				object = result.getString(COMMON_OBJECTS.MOBILE_WEB_COMMON.name());
+			} else if (Arrays.toString(WebExecutionPlatform.values()).contains(platform)) {
+				object = result.getString(COMMON_OBJECTS.WEB_COMMON.name());
+			} else if (object == null || object.isEmpty()) {
+				throw new HybridException("Value is null for the given object");
 			}
+		}
 		} catch (Exception e) {
-			throw new HybridException(e, "Exception in TestData.getObjectFromDB()");
+			throw new HybridException(e, "Exception in HybridTestData.getObjectFromDB()");
 		}
 		return object;
 	}

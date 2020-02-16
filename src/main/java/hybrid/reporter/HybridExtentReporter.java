@@ -13,80 +13,83 @@ import hybrid.HybridConstants.Report;
 
 @SuppressWarnings("deprecation")
 public class HybridExtentReporter implements HybridReporterBase {
-	
-	
-	public static ExtentReports extent;
+
+	public static ExtentReports extent = null;
 	public static ExtentTest logger;
 	public static ExtentHtmlReporter reporter;
+
+	public HybridExtentReporter() {
+		setReporterInitialization();
+	}
+	private void setReporterInitialization() {
+		if(extent == null) {
+			reporter = new ExtentHtmlReporter(Report.REPORT_DIRECTORY.getReportOptionValue() + File.separator
+					+ Report.PROJECT_BASE_DIRECTORY.getReportOptionValue() + HybridConstants.REPORT_EXTENSION);
+			configReporting();
+			extent = new ExtentReports();
+			extent.attachReporter(reporter);
+		}
+	}
 	
-	public HybridExtentReporter(){
-		
-		reporter = new ExtentHtmlReporter(Report.REPORT_DIRECTORY.getReportOptionValue() + File.separator
-				+ Report.PROJECT_BASE_DIRECTORY.getReportOptionValue() +  HybridConstants.REPORT_EXTENSION);
-		configReporting();
-		extent = new ExtentReports();
-		extent.attachReporter(reporter);
-}
-	
-	
+
 	public static void configReporting() {
 		reporter.config().setTheme(Theme.DARK);
 		reporter.config().setDocumentTitle("Automation Report");
 		reporter.config().setEncoding("utf-8");
 		reporter.config().setReportName("AutomationReport");
 	}
-	
+
 	public void setExtentReport(ExtentReports extent) {
-		
+
 		HybridExtentReporter.extent = extent;
 	}
 
 	public ExtentReports getExtentReport() {
-		
+
 		return extent;
 	}
 
 	public void setLogger(ExtentTest logger) {
-		
+
 		HybridExtentReporter.logger = logger;
 	}
 
 	public ExtentTest getLogger() {
-		
+
 		return logger;
 	}
 
 	public void setReporter(ExtentHtmlReporter reporter) {
-		
+
 		HybridExtentReporter.reporter = reporter;
 	}
 
 	public ExtentHtmlReporter getReporter() {
-		
+
 		return reporter;
 	}
 
 	@Override
 	public void stepPass(String reportText) {
-		
+
 		logger.log(Status.PASS, reportText);
 	}
 
 	@Override
 	public void stepFail(String reportText) {
-		
+
 		logger.log(Status.FAIL, reportText);
 	}
 
 	@Override
 	public void stepException(String reportText) {
-		
+
 		logger.log(Status.FATAL, reportText);
 	}
 
 	@Override
 	public void stepWarning(String reportText) {
-		
+
 		logger.log(Status.WARNING, reportText);
 	}
 
@@ -94,10 +97,10 @@ public class HybridExtentReporter implements HybridReporterBase {
 	public void stepInfo(String reportText) {
 		logger.log(Status.INFO, reportText);
 	}
-	
+
 	@Override
 	public void stepError(String reportText) {
-		
+
 		logger.log(Status.ERROR, reportText);
 	}
 
@@ -106,12 +109,12 @@ public class HybridExtentReporter implements HybridReporterBase {
 
 		logger.log(Status.SKIP, reportText);
 	}
-	
+
 	public void stepDebug(String reportText) {
-		
+
 		logger.log(Status.DEBUG, reportText);
 	}
-	
+
 	@Override
 	public void teststart(String testName) {
 		logger = extent.createTest(testName);

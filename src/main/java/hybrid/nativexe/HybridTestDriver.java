@@ -14,6 +14,7 @@ public class HybridTestDriver {
 	public static void main(String[] args) {
 		
 		try {
+			System.out.println("Execution Started !");
 			HybridConfigurations hybridConfigurations = HybridConfigurations.getInstance();
 			List<Map<String, String>> capability = hybridConfigurations.getCapability();
 			ExecutorService executor = Executors.newFixedThreadPool(capability.size());

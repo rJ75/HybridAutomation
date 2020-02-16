@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1" thread-count ="1">
+
+	<listeners>
+		<listener class-name="hybrid.testng.TestNGListener;"></listener>
+	</listeners>
+	<test name="Automation Testing">
+		<packages>
+			<package name="ebay.tests" />
+		</packages>
+	</test>
+</suite>

@@ -56,6 +56,7 @@ public class HybridAppiumStudioMobileAPI extends HybridReporter implements Hybri
 				driver = new IOSDriver<>(new URL(AppiumStudioConfig.LOCAL_URL.getConfigOptionValue()),dc);
 			}
 			driver.setLogLevel(Level.INFO);
+			driver.launchApp();
 		} catch(Exception e) {
 			throw new HybridException(e, "Exception in setting HybridAppiumStudioMobileAPI driver");
 		}

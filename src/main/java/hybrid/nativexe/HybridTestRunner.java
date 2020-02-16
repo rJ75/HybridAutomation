@@ -18,7 +18,7 @@ public class HybridTestRunner implements Runnable {
 	Map<String, String> capability;
 	DesiredCapabilities dc = new DesiredCapabilities();
 	HybridCoreBase driver = null;
-	HybridBasePage basePage = null;
+	static HybridBasePage basePage = null;
 	int testCount = 0;
 	
 	public HybridTestRunner(Map<String, String> capability) {
@@ -36,8 +36,7 @@ public class HybridTestRunner implements Runnable {
 			basePage.setDriver(dc);
 			driver = basePage.getDriver();
 			runTestCases();
-			System.out.println("hello");
-			
+		
 		} catch (HybridException e) {
 			e.handleException();
 		} catch(Exception e) {
@@ -83,7 +82,7 @@ public class HybridTestRunner implements Runnable {
 		}
 	}
 
-	private void setTestData(ResultSet tests)  throws HybridException {
+	public void setTestData(ResultSet tests)  throws HybridException {
 		
 		try {
 			Map<String, String> testData = new HashMap<String, String>();

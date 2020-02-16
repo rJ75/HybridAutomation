@@ -1,16 +1,23 @@
 package ebay.tests;
 
-import hybrid.HybridBasePage;
-import hybrid.base.HybridCoreBase;
+import org.testng.annotations.Test;
+
+import ebay.testslogicsupports.LoginTestSupport;
+import hybrid.HybridException;
 
 public class LoginTest {
 	
 	
-	public void Test01() {
-		
-		HybridBasePage basePage = HybridBasePage.getHybridBasePage();
-		HybridCoreBase driver = basePage.getDriver();
-		
+	/**
+	 * Test to login to the app
+	 * @author roshan.james
+	 * @throws HybridException 
+	 */
+	@Test
+	public void Test01() throws HybridException {
+
+		LoginTestSupport loginTestSupport = new LoginTestSupport();
+		loginTestSupport.loginToApp();
 		
 	}
 

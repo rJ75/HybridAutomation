@@ -3,18 +3,19 @@ package hybrid;
 public class HybridException extends Exception {
 
 	private static final long serialVersionUID = 1L;
-	private String exceptionMessage = "HybridException";
+	private static String exceptionMessage = "HybridException";
 	
 	private String getExceptionMessage() {
 		return exceptionMessage;
 	}
 
 	private void setExceptionMessage(String exceptionMessage) {
-		this.exceptionMessage = exceptionMessage;
+		HybridException.exceptionMessage = HybridException.exceptionMessage + "\n" + exceptionMessage;
 	}
 
 	public HybridException() {
 		super();
+		exceptionMessage = exceptionMessage + "\n" + getMessage();
 	}
 	
 	public HybridException(String exMessage){
@@ -33,9 +34,11 @@ public class HybridException extends Exception {
 		System.err.println("\n\n***************************************************************************************************");
 		System.err.println("Exception occured : \n");
 		System.err.println(getExceptionMessage() + " : " + getMessage() + "\n");
+		
 		printStackTrace();
 		System.err.println("***************************************************************************************************");
 		System.out.println("\n\n");
+		HybridException.exceptionMessage = null;
 	}
 	
 }

@@ -47,7 +47,18 @@ public class HybridBasePage extends HybridTestData {
 			isChrome, isFirefox, isIe, isEdge, isSafari, isOpera,
 			isLocal, isGrid, isAPI;
 	
-	
+	private HybridBasePage() {
+	}
+
+	public static HybridBasePage getHybridBasePage() {
+
+		return hybridBasePage;
+	}
+
+	public HybridCoreBase getDriver() {
+
+		return driver;
+	}
 	
 	private void initalize(){
 		driver = null;
@@ -152,19 +163,6 @@ public class HybridBasePage extends HybridTestData {
 		return isGrid;
 	}
 
-	private HybridBasePage() {
-		
-	}
-
-	public static HybridBasePage getHybridBasePage() {
-
-		return hybridBasePage;
-	}
-
-	public HybridCoreBase getDriver() {
-
-		return driver;
-	}
 
 	public void setDriver(DesiredCapabilities dc) throws HybridException {
 		initializeEligibility();

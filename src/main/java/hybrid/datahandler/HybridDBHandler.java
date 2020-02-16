@@ -20,8 +20,9 @@ public class HybridDBHandler {
 		
 		try {
 			Class.forName(driverClass).newInstance ();
-			String connectionString = String.format("%s?user=%s&password=%s", driverClass, url, password);
+			String connectionString = String.format("%s?user=%s&password=%s", url, username, password);
 			connection = DriverManager.getConnection(connectionString);
+			System.out.println("Database Connected !");
 		} catch (Exception e) {
 			throw new HybridException(e, "SQLException : DataBase Connection Failed!");
 		}  

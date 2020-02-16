@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import hybrid.HybridConstants.AppiumStudioConfig;
+import hybrid.HybridConstants.Applicaton;
 import hybrid.HybridConstants.ExecutionPlatform;
 import hybrid.HybridConstants.MobileExecutionPlatform;
 import hybrid.HybridConstants.Report;
@@ -42,6 +43,7 @@ public class HybridAppiumStudioMobileWebAPI  extends HybridReporter implements H
 				driver = new IOSDriver<>(new URL(AppiumStudioConfig.LOCAL_URL.getConfigOptionValue()),dc);
 			}
 			driver.setLogLevel(Level.INFO);
+			driver.get(Applicaton.WEB_APP_ADDRESS.getApplicationOptionValue());
 		} catch(Exception e) {
 			throw new HybridException(e, "Exception in setting HybridAppiumStudioMobileAPI driver");
 		}

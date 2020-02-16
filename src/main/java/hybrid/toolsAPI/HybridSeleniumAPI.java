@@ -15,6 +15,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import hybrid.HybridConstants.Applicaton;
 import hybrid.HybridConstants.ExecutionPlatform;
 import hybrid.HybridConstants.Report;
 import hybrid.HybridConstants.WebExecutionPlatform;
@@ -32,7 +33,7 @@ public class HybridSeleniumAPI extends HybridReporter implements HybridWebBase {
 		this.dc = dc;
 		setCapabilities();
 		setDriver();
-		setTimeOut(10000);
+		setTimeOut(100000);
 	}
 
 	private void setDriver() throws HybridException {
@@ -62,6 +63,7 @@ public class HybridSeleniumAPI extends HybridReporter implements HybridWebBase {
 				
 			}
 			driver.manage().window().maximize();
+			driver.get(Applicaton.WEB_APP_ADDRESS.getApplicationOptionValue());
 		} catch(Exception e) {
 			throw new HybridException(e, "Exception in setting HybridAppiumStudioMobileAPI driver");
 		}
@@ -104,7 +106,7 @@ public class HybridSeleniumAPI extends HybridReporter implements HybridWebBase {
 
 		boolean status = false;
 		try {
-			driver.findElement(By.xpath(object));
+			driver.findElement(By.xpath(object)).click();
 			status = true;
 			stepPass("Object clicked. Object : " + object);
 		} catch (Exception e) {
