@@ -1,27 +1,14 @@
 package hybrid.toolsAPI;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-
-
-import org.openqa.selenium.*;
-import org.openqa.selenium.html5.*;
-import org.openqa.selenium.logging.*;
-import org.openqa.selenium.remote.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import hybrid.base.HybridMobileNativeBase;
 
-import org.openqa.selenium.Cookie.Builder;
-import org.openqa.selenium.NoSuchElementException;
-
-
-import io.appium.java_client.*;
-import io.appium.java_client.android.*;
-import io.appium.java_client.ios.*;
-
 public class HybridPerfectoAPI implements HybridMobileNativeBase {
+
+	public HybridPerfectoAPI(DesiredCapabilities dc) {
+		// TODO Auto-generated constructor stub
+	}
 //
 //
 //    public static void main(String[] args) throws MalformedURLException, IOException {
@@ -199,4 +186,124 @@ public class HybridPerfectoAPI implements HybridMobileNativeBase {
 //            capabilities.setCapability(EclipseConnector.ECLIPSE_EXECUTION_ID, executionId);
 //        }
 //    }
+
+
+	public boolean click(String object) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isDisplayed(String object) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void clearText(String object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isEnabled(String object) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isSelected(String object) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getProperty(String object, String property) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void sendText(String object, String textToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getText(String object) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void closeApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getDeviceTime() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void typeThroughKeyboard(String keysToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean uninstallApp(String appBundleID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void resetApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void launchApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void closeKeyboard() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void installApp(String appPath) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void killApp(String appBundleId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setTimeOut(long timeInMilliSecond) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setContext() {
+		// TODO Auto-generated method stub
+		
+	}
 }

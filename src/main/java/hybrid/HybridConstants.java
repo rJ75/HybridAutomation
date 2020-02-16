@@ -7,15 +7,18 @@ public class HybridConstants {
 
 	public static final String UTF8_FORMAT = "UTF8";
 	public static final String PROPERTIES_EXTENSION = ".properties";
+	public static final String REPORT_EXTENSION = ".html";
 	public static final String HYBRID_CONFIG_PROPERTY_FILE = "HybridConfig" + PROPERTIES_EXTENSION;
 	public static final String CONFIG_PROPERTIES_FOLDER = "Resources" + File.separator + "HybridAutomation"
 			+ File.separator + "ConfigProperties";
 	public static final String APPLICATION_TEST_PARENT_FOLDER = "src" + File.separator + "test" + File.separator
 			+ "java";
 	public static final String APPLICATION_RESOURCES_PARENT_FOLDER = "Resources";
+	public static final String TOOLS_PROPERTY_FILE = CONFIG_PROPERTIES_FOLDER + File.separator + "Tools"
+			+ PROPERTIES_EXTENSION;
 	public static String applicationConfigFile;
 
-	enum ExecutionPlatform {
+	public enum ExecutionPlatform {
 
 		MOBILE("Mobile"), MOBILE_WEB("MobileWeb"), WEB("Web"), API("API");
 
@@ -109,7 +112,7 @@ public class HybridConstants {
 		APPIUMSTUDIO, SEETEST, PERFECTO, HEADSPIN, SELENIUM, SAUCELABS, PCLOUDY, APPIUM;
 	}
 
-	enum MobileExecutionPlatform {
+	public enum MobileExecutionPlatform {
 
 		ANDROID("Android"), IPHONE("iPhone"), IPAD("iPad"), ANDROID_WEB("AndroidWeb"), IPHONE_WEB("iPhoneWeb"),
 		IPAD_WEB("iPadWeb");
@@ -121,7 +124,7 @@ public class HybridConstants {
 			this.executionPlatform = executionPlatform.trim();
 		}
 
-		protected String getExecutionPlatform() {
+		public String getExecutionPlatform() {
 			return executionPlatform;
 		}
 
@@ -134,7 +137,7 @@ public class HybridConstants {
 		}
 	}
 
-	enum WebExecutionPlatform {
+	public enum WebExecutionPlatform {
 
 		CHROME("Chrome"), FIREFOX("FireFox"), IE("IE"), EDGE("Edge"), SAFARI("Safari"), OPERA("Opera");
 
@@ -193,7 +196,7 @@ public class HybridConstants {
 		DB, EXCEL, CSV, PROPERTIES, JSON, XML, YAML;
 	}
 
-	enum Report {
+	public enum Report {
 
 		REPORT_TYPE("ReportType"), APPEND_REPORT("AppendReport"), REPORT_DIRECTORY("ReportDirectory"),
 		PROJECT_BASE_DIRECTORY("ProjectBaseDirectory");
@@ -218,7 +221,7 @@ public class HybridConstants {
 		}
 	}
 
-	enum Applicaton {
+	public enum Applicaton {
 
 		AUT_NAME("AUTName"), ANDROID_APP_NAME("AndroidAppName"), IOS_APP_NAME("iOSAppName"),
 		WEB_APP_ADDRESS("WebAppAddress"), ANDROID_APP_ACTIVITY("AndroidAppActivity");
@@ -327,7 +330,7 @@ public class HybridConstants {
 		}
 	}
 
-	enum SeeTestConfig {
+	enum SeetestConfig {
 
 		CLOUD_URL("SeeTestCloudURL"), USERNAME("SeeTestUsername"), PASSWORD("SeeTestPassword"),
 		ACCESSKEY("SeeTestAccessKey"), LOCAL_URL("SeeTestLocalURL");
@@ -335,7 +338,7 @@ public class HybridConstants {
 		private String configOption;
 		private String configOptionValue;
 
-		SeeTestConfig(String configOption) {
+		SeetestConfig(String configOption) {
 			this.configOption = configOption.trim();
 		}
 
@@ -402,7 +405,7 @@ public class HybridConstants {
 		}
 	}
 
-	enum PCloudyConfig {
+	enum pCloudyConfig {
 
 		CLOUD_URL("PCloudyCloudURL"), USERNAME("PCloudyUsername"), PASSWORD("PCloudyPassword"),
 		ACCESSKEY("PCloudyAccessKey"), LOCAL_URL("PCloudyLocalURL");
@@ -410,7 +413,7 @@ public class HybridConstants {
 		private String configOption;
 		private String configOptionValue;
 
-		PCloudyConfig(String configOption) {
+		pCloudyConfig(String configOption) {
 			this.configOption = configOption.trim();
 		}
 
@@ -427,7 +430,7 @@ public class HybridConstants {
 		}
 	}
 
-	enum AppiumStudioConfig {
+	public enum AppiumStudioConfig {
 
 		CLOUD_URL("AppiumStudioCloudURL"), USERNAME("AppiumStudioUsername"), PASSWORD("AppiumStudioPassword"),
 		ACCESSKEY("AppiumStudioAccessKey"), LOCAL_URL("AppiumStudioLocalURL");
@@ -476,7 +479,7 @@ public class HybridConstants {
 			this.configOptionValue = configOptionValue.trim();
 		}
 	}
-	
+
 	enum AppiumServerConfig {
 
 		CLOUD_URL("AppiumServerCloudURL"), USERNAME("AppiumServerUsername"), PASSWORD("AppiumServerPassword"),
@@ -500,5 +503,45 @@ public class HybridConstants {
 		public void setConfigOptionValue(String configOptionValue) {
 			this.configOptionValue = configOptionValue.trim();
 		}
+	}
+
+	public enum TestCaseData {
+
+		ALMID(TestDataFields.ALMID.name()), JSON(TestDataFields.JSON.name()), MODULE(TestDataFields.MODULE.name()),
+		SUB_MODULE(TestDataFields.SUB_MODULE.name()), TC_ID(TestDataFields.TC_ID.name()),
+		USERNAME(TestDataFields.USERNAME.name()), PASSWORD(TestDataFields.PASSWORD.name()),
+		PACKAGE_NAME(TestDataFields.PACKAGE_NAME.name()), CLASS_NAME(TestDataFields.CLASS_NAME.name()),
+		TC_NAME(TestDataFields.TC_NAME.name()), TC_TYPE(TestDataFields.TC_TYPE.name());
+
+		private String data;
+		private String dataValue;
+
+		TestCaseData(String data) {
+			this.data = data.trim();
+		}
+
+		public String getConfigOption() {
+			return data;
+		}
+
+		public String getConfigOptionValue() {
+			return dataValue;
+		}
+
+		public void setConfigOptionValue(String dataValue) {
+			this.dataValue = dataValue.trim();
+		}
+	}
+
+	public enum TestDataFields {
+		EXECUTE_FLAG, ALMID, JSON, ANDROID_ELIGIBLE, IPHONE_ELIGIBLE, IPAD_ELIGIBLE, ANDROID_WEB_ELIGIBLE,
+		IPHONE_WEB_ELIGIBLE, IPAD_WEB_ELGIBLE, CHROME_ELIGIBLE, FIREFOX_ELIGIBLE, IE_ELIGIBLE, SAFARI_ELIGIBLE,
+		EDGE_ELIGIBLE, OPERA_ELIGIBLE, API_ELIGIBLE, MODULE, SUB_MODULE, TC_ID, USERNAME, PASSWORD, PACKAGE_NAME,
+		CLASS_NAME, TC_NAME, TC_TYPE;
+	}
+
+	public enum ObjectDataFields {
+		ID, SCREEN, OBJECT, MOBILE_COMMON, ANDROID, IPHONE, IPAD, MOBILE_WEB_COMMON, ANDROIDWEB, IPHONEWEB, IPADWEB,
+		WEB_COMMON, CHROME, FIREFOX, IE, SAFARI, EDGE, OPERA;
 	}
 }

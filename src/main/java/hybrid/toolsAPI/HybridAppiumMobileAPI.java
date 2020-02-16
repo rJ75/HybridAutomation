@@ -1,106 +1,130 @@
 package hybrid.toolsAPI;
 
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileBrowserType;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.Activity;
-import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.*;
 
 import hybrid.base.HybridMobileNativeBase;
 
-import java.net.URL;
-import java.net.MalformedURLException;
-import java.util.logging.Level;
-
 public class HybridAppiumMobileAPI implements HybridMobileNativeBase {
 	
+	
 
-	private String testName = "dummy";
-	protected AndroidDriver<AndroidElement> driver = null;
-
-	DesiredCapabilities dc = new DesiredCapabilities();
-
-
-
-	@BeforeMethod
-	public void setUp() throws MalformedURLException {
-		dc.setCapability("reportDirectory", reportDirectory);
-		dc.setCapability("reportFormat", "xml");
-		dc.setCapability("testName", testName);
-		dc.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANdroid");
-		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
-//		dc.setBrowserName(MobileBrowserType.CHROME);
-
-		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,
-				".LoginActivity");
-		
-		driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);
-		driver.setLogLevel(Level.INFO);
+	public HybridAppiumMobileAPI(DesiredCapabilities dc) {
+		// TODO Auto-generated constructor stub
 	}
 
-//	@Test
-	public void testdummy() {
-//		 driver.get("http://www.google.com");
-//	        String pageSource1 = driver.getPageSource();
-
-//		driver.installApp("com.experitest.ExperiBank/.LoginActivity");
-		try {
-			Thread.sleep(2000);
-		} catch (Exception ignore) {
-		}
-		driver.startActivity(new Activity("com.experitest.ExperiBank", ".LoginActivity"));
-		try {
-			Thread.sleep(2000);
-			MobileElement ele = null;
-			ele = driver.findElementByXPath("//*[@text='OK']");
-			if(ele != null) {
-				driver.findElement(By.xpath("//*[@text='OK']")).click();
-			}
-		} catch (Exception ignore) {
-		}
-		
-		
-		
-		try {
-			Thread.sleep(2000);
-			WebElement ele = null;
-			ele =  driver.findElement(By.xpath("//*[@id='usernameTextField']"));
-			if(ele != null) {
-				driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys("hello");
-			}
-		} catch (Exception ignore) {
-			ignore.getMessage();
-			ignore.printStackTrace();
-		}
-		
-		try {
-			Thread.sleep(2000);
-		} catch (Exception ignore) {
-		}
-		driver.findElement(By.xpath("//*[@id='passwordTextField']")).sendKeys("login");
-		try {
-			Thread.sleep(2000);
-		} catch (Exception ignore) {
-		}
-		driver.findElement(By.xpath("//*[@id='loginButton']")).click();
-		try {
-			Thread.sleep(2000);
-		} catch (Exception ignore) {
-		}
-		new WebDriverWait(driver, 10)
-				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Close']")));
+	@Override
+	public boolean click(String object) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
+	@Override
+	public boolean isDisplayed(String object) {
+		// TODO Auto-generated method stub
+		return false;
 	}
+
+	@Override
+	public void clearText(String object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isEnabled(String object) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isSelected(String object) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getProperty(String object, String property) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void sendText(String object, String textToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getText(String object) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void closeApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getDeviceTime() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void typeThroughKeyboard(String keysToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean uninstallApp(String appBundleID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void resetApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchApp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeKeyboard() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void installApp(String appPath) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void killApp(String appBundleId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setTimeOut(long timeInMilliSecond) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setContext() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
 }
