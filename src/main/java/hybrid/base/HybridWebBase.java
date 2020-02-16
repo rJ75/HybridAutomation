@@ -18,20 +18,20 @@ public interface HybridWebBase extends HybridCoreBase {
 	
 	String getText(String object);
 	
-	String getDeviceTime();
-	
-	void typeThroughKeyboard(String keysToSend);
-	
 	String getCurrentUrl();
 	
 	String getPageSource();
 	
 	String getPageTitle();
 	
-	void closeKeyboard();
-	
 	void setTimeOut(long timeInMilliSecond);
 	
 	void getUrl(String url);
+	
+	void setPageLoadTimeout(long timeInMilliSecond);
+	
+	void maximizeWindow();
+	
+	void setFullScreenWindow();
 
 }

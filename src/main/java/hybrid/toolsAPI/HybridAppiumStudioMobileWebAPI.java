@@ -57,7 +57,7 @@ public class HybridAppiumStudioMobileWebAPI  extends HybridReporter implements H
 		
 		if (dc.getCapability(ExecutionPlatform.class.getSimpleName())
 				.equals(MobileExecutionPlatform.ANDROID.getExecutionPlatform())) {
-			dc.setCapability(MobileCapabilityType.PLATFORM_NAME, MobileExecutionPlatform.ANDROID.getExecutionPlatform());
+			dc.setCapability(MobileCapabilityType.PLATFORM_NAME, MobileExecutionPlatform.ANDROID.getExecutionPlatform().toLowerCase());
 			dc.setBrowserName(MobileBrowserType.CHROME);
 		} else if(dc.getCapability(ExecutionPlatform.class.getSimpleName()).equals(MobileExecutionPlatform.IPHONE.getExecutionPlatform())) {
 			dc.setCapability("attach.crash.log.to.report", true);

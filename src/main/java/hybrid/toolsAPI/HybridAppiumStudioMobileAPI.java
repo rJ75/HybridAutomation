@@ -71,7 +71,7 @@ public class HybridAppiumStudioMobileAPI extends HybridReporter implements Hybri
 		
 		if (dc.getCapability(ExecutionPlatform.class.getSimpleName())
 				.equals(MobileExecutionPlatform.ANDROID.getExecutionPlatform())) {
-			dc.setCapability(MobileCapabilityType.PLATFORM_NAME, MobileExecutionPlatform.ANDROID.getExecutionPlatform());
+			dc.setCapability(MobileCapabilityType.PLATFORM_NAME, MobileExecutionPlatform.ANDROID.getExecutionPlatform().toLowerCase());
 			dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, Applicaton.ANDROID_APP_NAME.getApplicationOptionValue());
 			dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,
 					Applicaton.ANDROID_APP_ACTIVITY.getApplicationOptionValue());

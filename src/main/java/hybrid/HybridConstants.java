@@ -148,7 +148,7 @@ public class HybridConstants {
 			this.executionPlatform = executionPlatform.trim();
 		}
 
-		protected String getExecutionPlatform() {
+		public String getExecutionPlatform() {
 			return executionPlatform;
 		}
 
