@@ -67,9 +67,6 @@ public class HybridTestRunner implements Runnable {
 					setTestData(tests);
 					basePage.teststart(basePage.getCurrentPlatform() + " ~ " + basePage.getALMID() +" ~ " +  basePage.getTestCaseID() + 
 							" ~ " + basePage.getTestCaseName());
-//					Class<?> c = Class.forName(basePage.getPackageName() + "." + basePage.getClassName());
-//				    Method main = c.getDeclaredMethod(basePage.getTestCaseID());
-//				    main.invoke(c.newInstance());
 				    
 					Object object = Class.forName(basePage.getPackageName() + "." + basePage.getClassName()).newInstance();
 					Method method = object.getClass().getDeclaredMethod(basePage.getTestCaseID());

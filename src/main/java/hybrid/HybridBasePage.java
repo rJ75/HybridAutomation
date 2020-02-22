@@ -16,7 +16,6 @@ import hybrid.toolsAPI.HybridAppiumMobileAPI;
 import hybrid.toolsAPI.HybridAppiumMobileWebAPI;
 import hybrid.toolsAPI.HybridAppiumStudioMobileAPI;
 import hybrid.toolsAPI.HybridAppiumStudioMobileWebAPI;
-import hybrid.toolsAPI.HybridPerfectoAPI;
 import hybrid.toolsAPI.HybridSeetestAPI;
 import hybrid.toolsAPI.HybridSeleniumAPI;
 
@@ -309,7 +308,6 @@ public class HybridBasePage extends HybridTestData {
 			}
 			break;
 		case PERFECTO:
-			driver = new HybridPerfectoAPI(dc);
 			break;
 		case HEADSPIN:
 			break;
